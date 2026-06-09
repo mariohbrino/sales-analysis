@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sales-analysis"
+version = "0.1.0"
+description = "Python Sales Analysis Example"
+authors = [
+    {name = "Mario Brino", email = "mariobrino@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.16",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
