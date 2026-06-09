@@ -1,0 +1,13 @@
+line-length = 120
+target-version = "py313"
+
+[lint]
+select = [
+  "E",   # Pycodestyle errors (style issues)
+  "I",   # Pycodestyle organize imports (style issues)
+  "W",   # Pycodestyle warnings (style issues)
+  "F",   # Pyflakes – detects syntax errors and basic mistakes
+  "N",   # PEP8 Naming – naming conventions
+  "Q",   # Flake8-quotes – enforces quote style consistency
+  "RSE", # Flake8-raise – proper raise statement usage
+]
