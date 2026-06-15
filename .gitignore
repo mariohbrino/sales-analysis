@@ -13,4 +13,5 @@ wheels/
 .env
 
 # Custom folders
+.ruff_cache
 /storage
