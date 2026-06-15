@@ -181,3 +181,7 @@ class AnalyzeTrend:
             output_filename=output_filename,
             dataframe=final_result,
         )
+
+        output_file_path = os.path.join(output_dir, output_filename)
+
+        print(f"Trends exported to: '{output_file_path}'")
