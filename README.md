@@ -14,8 +14,8 @@ with Pandas, high performance, and efficiency capabilities.
 
 # Data Analysis Results
 
-What are the purchasing trends by gender for Brands 1 and 2 in the sports category?
-Which sales channel performed best on the first year post the COVID-19 pandemic?
+- What are the purchasing trends by gender for Brands 1 and 2 in the sports category?
+- Which sales channel performed best on the first year post the COVID-19 pandemic?
 
 # Development Environment
 
