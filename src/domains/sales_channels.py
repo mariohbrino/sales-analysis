@@ -3,12 +3,16 @@ from datetime import date
 
 import polars as pl
 
+from services.chart.bar_chart import BarChart
 from services.loader.load_dataset import load_dataframe
 from services.writter.csv_writter import export_dataframe_to_csv
 from utils.console_display import format_and_print
 
 
 class SalesChannel:
+    def __init__(self) -> None:
+        self._bar_chart = BarChart()
+
     def _aggregate_sales_by_channel(
         self,
         lazyframe: pl.LazyFrame,
@@ -102,3 +106,14 @@ class SalesChannel:
         output_file_path = os.path.join(output_dir, output_filename)
 
         print(f"Sales channels period exported to: '{output_file_path}'")
+
+        self._bar_chart.plot(
+            dataframe=period_collected,
+            output_dir=output_dir,
+            horizontal_data="sales_channel",
+            vertical_data="total_sales",
+            title="Sales by Channel",
+            horizontal_label="Sales Channel",
+            vertical_label="Sales Amount",
+            output_image_name="sales_by_channel.png",
+        )
