@@ -53,3 +53,4 @@ uv pip install -e .
 * [Python](https://www.python.org/)
 * [Ruff](https://docs.astral.sh/ruff/)
 * [Polars](https://pola.rs/)
+* [Matplotlib](https://matplotlib.org/)
