@@ -5,7 +5,7 @@ import click
 from services.repository.download_repository import download_dataset
 
 
-@click.command(help="Download the retail sales dataset from Kaggle")
+@click.command(name="download", help="Download the retail sales dataset from Kaggle")
 @click.option("--output-dir", default="./storage/datasets", help="Output directory")
 def download_dataset_command(
     output_dir: str,

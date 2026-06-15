@@ -10,5 +10,5 @@ def app() -> None:
     load_dotenv()
 
 
-app.add_command(download_dataset_command, name="download")
-app.add_command(analyze_trends_command, name="analyze-trends")
+app.add_command(download_dataset_command)
+app.add_command(analyze_trends_command)

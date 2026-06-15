@@ -3,7 +3,7 @@ import click
 from domains.analyze_trends import AnalyzeTrend
 
 
-@click.command(help="Analyze the retail sales dataset")
+@click.command(name="analyze-trends", help="Analyze the retail sales dataset")
 @click.option("--input-dir", default="./storage/datasets", help="Input directory")
 @click.option("--output-dir", default="./storage/reports", help="Output directory")
 @click.option("--output-filename", default="trends_analysis.csv", help="Output filename")
