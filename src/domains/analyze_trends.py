@@ -3,6 +3,7 @@ import os
 import polars as pl
 
 from services.loader.load_dataset import load_dataframe
+from utils.console_display import format_and_print
 
 
 class AnalyzeTrend:
@@ -109,13 +110,6 @@ class AnalyzeTrend:
             }
         )
 
-    def _format_and_print_results(
-        self,
-        dataframe: pl.DataFrame,
-    ) -> None:
-        with pl.Config(float_precision=2, set_tbl_width_chars=200, set_fmt_float="full"):
-            print(dataframe)
-
     def _export_trends_to_csv(
         self,
         output_dir: str,
@@ -189,7 +183,7 @@ class AnalyzeTrend:
         )
 
         # Configure Polars to display numbers without scientific notation
-        self._format_and_print_results(dataframe=final_result)
+        format_and_print(dataframe=final_result)
 
         # Export the final result to CSV
         self._export_trends_to_csv(
